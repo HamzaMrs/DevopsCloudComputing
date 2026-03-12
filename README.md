@@ -1,4 +1,4 @@
-# ☁️ Cloud EFREI — Infrastructure Terraform + Flask sur Azure
+# Cloud EFREI — Infrastructure Terraform + Flask sur Azure
 
 Déploiement automatisé d'une infrastructure cloud complète sur **Azure** avec **Terraform** :
 - **Machine virtuelle Linux** (Ubuntu 24.04) avec une application **Flask**
@@ -8,7 +8,7 @@ Déploiement automatisé d'une infrastructure cloud complète sur **Azure** avec
 
 ---
 
-## 📁 Structure du Projet
+## Structure du Projet
 
 ```
 Cloud/
@@ -29,7 +29,7 @@ Cloud/
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
                     ┌──────────────────────────────────────────┐
@@ -66,7 +66,7 @@ Cloud/
 
 ---
 
-## ✅ Prérequis
+## Prérequis
 
 1. **Terraform** ≥ 1.0 — [Installation](https://developer.hashicorp.com/terraform/install)
 2. **Azure CLI** — [Installation](https://docs.microsoft.com/fr-fr/cli/azure/install-azure-cli)
@@ -110,7 +110,7 @@ db_name              = "flaskdb"
 app_port             = 5000
 ```
 
-> ⚠️ Le `storage_account_name` doit être globalement unique, 3-24 caractères, minuscules et chiffres uniquement.
+> Le `storage_account_name` doit être globalement unique, 3-24 caractères, minuscules et chiffres uniquement.
 
 ### 1.2. Initialiser Terraform
 
@@ -149,7 +149,7 @@ ssh_command            = "ssh azureuser@XX.XX.XX.XX"
 
 ---
 
-## 🔌 Étape 2 : Tester l'API
+## Étape 2 : Tester l'API
 
 > **Note** : Attendre 2-3 minutes après le déploiement pour que le provisionnement de la VM soit terminé.
 
@@ -217,7 +217,7 @@ curl -X DELETE http://<IP_PUBLIQUE>:5000/db/items/1
 
 ---
 
-## 🔧 Étape 3 : Accès SSH à la VM
+## Étape 3 : Accès SSH à la VM
 
 ```bash
 ssh azureuser@<IP_PUBLIQUE>
@@ -251,7 +251,7 @@ Tapez `yes` pour confirmer la suppression de toutes les ressources.
 
 ---
 
-## 📊 Ressources Créées par Terraform
+## Ressources Créées par Terraform
 
 | Ressource | Type Azure | Description |
 |---|---|---|
@@ -269,7 +269,7 @@ Tapez `yes` pour confirmer la suppression de toutes les ressources.
 
 ---
 
-## 💡 Technologies Utilisées
+## Technologies Utilisées
 
 - **Terraform** — Infrastructure as Code
 - **Azure** — Cloud Provider (VM, Blob Storage, PostgreSQL, VNet, NSG)
@@ -281,7 +281,7 @@ Tapez `yes` pour confirmer la suppression de toutes les ressources.
 
 ---
 
-## ⚠️ Notes Importantes
+## Notes Importantes
 
 - Le fichier `terraform.tfvars` contient des informations sensibles et **ne doit pas** être versionné (il est dans le `.gitignore`)
 - Le `storage_account_name` doit être **globalement unique** (3-24 caractères, minuscules et chiffres)
