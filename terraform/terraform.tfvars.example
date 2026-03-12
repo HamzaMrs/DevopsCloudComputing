@@ -1,0 +1,27 @@
+# =============================================================================
+# Exemple de fichier de variables Terraform - Azure
+# Copiez ce fichier en terraform.tfvars et remplissez les valeurs
+# =============================================================================
+
+# Région Azure
+location = "France Central"
+
+# Nom du projet
+project_name = "cloud-efrei"
+
+# VM
+vm_size        = "Standard_B2ls_v2"
+admin_username = "azureuser"
+admin_password = "MonMotDePasse@Securise123!"
+
+# Stockage (3-24 caractères, minuscules et chiffres uniquement)
+storage_account_name   = "cloudefreistorage2026"
+storage_container_name = "staticfiles"
+
+# Base de données PostgreSQL
+db_admin_username = "flaskadmin"
+db_admin_password = "PostgreSQL@Securise123!"
+db_name           = "flaskdb"
+
+# Port de l'application
+app_port = 5000
